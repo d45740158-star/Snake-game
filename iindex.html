@@ -177,10 +177,10 @@
   }
 
   window.addEventListener('keydown', e=>{
-    if (['ArrowUp','w','W'].includes(e.key)) setDir(0,-1);
-    else if (['ArrowDown','s','S'].includes(e.key)) setDir(0,1);
-    else if (['ArrowLeft','a','A'].includes(e.key)) setDir(-1,0);
-    else if (['ArrowRight','d','D'].includes(e.key)) setDir(1,0);
+    if (e.key==='ArrowUp' || e.code==='KeyW') setDir(0,-1);
+    else if (e.key==='ArrowDown' || e.code==='KeyS') setDir(0,1);
+    else if (e.key==='ArrowLeft' || e.code==='KeyA') setDir(-1,0);
+    else if (e.key==='ArrowRight' || e.code==='KeyD') setDir(1,0);
     else if (e.key==='p' || e.key==='P' || e.key===' ' || e.key==='Escape') togglePause();
   });
 
